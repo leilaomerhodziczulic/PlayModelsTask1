@@ -20,4 +20,12 @@ public class Product {
     public int stock;
     @ManyToOne(optional = false)
     public Category category;
+
+    public Product(String name, String sku, BigDecimal price, int stock, Category category){
+        this.name = name;
+        this.sku = sku;
+        this.price = price;
+        this.stock = stock;
+        this.category = category;
+    }
 }

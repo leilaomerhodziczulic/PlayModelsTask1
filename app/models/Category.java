@@ -21,4 +21,10 @@ public class Category {
     @OneToMany(mappedBy = "category")
     public List<Product> products;
 
+
+    public Category(String name, String code, boolean active){
+        this.name = name;
+        this.code = code;
+        this.active = active;
+    }
 }

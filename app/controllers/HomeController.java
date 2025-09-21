@@ -1,6 +1,10 @@
 package controllers;
 
+import models.Category;
+import models.Product;
 import play.mvc.*;
+
+import java.math.BigDecimal;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -18,4 +22,9 @@ public class HomeController extends Controller {
         return ok(views.html.index.render());
     }
 
+    public Result testDb(){
+        Category juice = new Category("juice", "123", true);
+        Product product = new Product("Orange Juice", "1234asd1234", new BigDecimal("1.25"), 10, juice);
+        return ok("Information in database!");
+    }
 }
